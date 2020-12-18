@@ -1,0 +1,79 @@
+
+.btn-edit {
+	background-color: #ffffff;
+	border: none;
+	color: #7d7d7d;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.btn-edit:hover{
+	background-color: #f2f2f2;
+}
+
+.btn-edit:active{
+	background-color: #f2f2f2;
+}
+
+.btn-cancel {
+	background-color: #ffffff;
+	border-color: #4ab4ff;
+	color: #4ab4ff;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.btn-cancel:hover{
+	background-color: #f2f2f2;
+}
+
+.btn-cancel:active{
+	background-color: #f2f2f2;
+}
+
+.btn-save {
+	background-color: #4ab4ff;
+	border: none;
+	color: #ffffff;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.btn-save:hover{
+	background-color: #267ebd;
+	color: #ffffff;
+}
+
+.btn-save:active{
+	background-color: #267ebd;
+	color: #ffffff;
+}
+
+
+
+.custom-control-input~.custom-control-label.orange::before {
+  color: #fff;
+  border-color: orange;
+}
+
+.custom-control-input:checked~.custom-control-label.orange::before {
+  background-color: orange;
+}
+
+.custom-control-input~.custom-control-label.purple::before {
+  color: #fff;
+  border-color: purple;
+}
+
+.custom-control-input:checked~.custom-control-label.purple::before {
+  background-color: purple;
+}
+
+.custom-control-input~.custom-control-label.blue::before {
+  color: #fff;
+  border-color: blue;
+}
+
+.custom-control-input:checked~.custom-control-label.blue::before {
+  background-color: blue;
+}
