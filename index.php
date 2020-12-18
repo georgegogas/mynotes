@@ -37,9 +37,9 @@
 				  <label class="custom-control-label orange" for="sortH">Health</label>
 				</div>
 			
-				<select class="form-control col-md-2 ml-auto mr-2" style="text-align-last: right">
-				  <option>Sort by: Newest</option>
-				  <option>Sort by: Oldest</option>
+				<select id="sort-by-date" class="form-control col-md-2 ml-auto mr-2" style="text-align-last: right">
+				  <option value="desc">Sort by: Newest</option>
+				  <option value="asc">Sort by: Oldest</option>
 				</select>
 			</div>
 		</form>

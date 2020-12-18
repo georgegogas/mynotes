@@ -13,7 +13,6 @@ function populateHTML(data) {
 function sortNotes(sortType) {
   // delete
   document.getElementById('note-grid').innerHTML = '';
-  debugger;
   let notes;
   if (sortType === 'desc') {
     notes = allNotes.sort((rec1, rec2) => new Date(rec2.created) - new Date(rec1.created));
@@ -80,4 +79,11 @@ $(document).ready(function () {
       alert('Error home.. status = ' + xhr.status + 'message = ' + xhr.statusText);
     },
   });
+});
+
+$(document).on('change', '#sort-by-date', function (e) {
+  const optionValue = this.value;
+  if (optionValue === 'asc' || optionValue === 'desc') {
+    sortNotes(optionValue);
+  }
 });
