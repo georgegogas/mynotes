@@ -1,9 +1,26 @@
 var selectedNoteId;
+let allNotes;
 
 // append html to note-grid div at index.php file
 function populateHTML(data) {
-  const noteResult = data.records;
-  $.each(noteResult, (index, note) => {
+  // sort by newest
+  allNotes = data.records.sort((rec1, rec2) => new Date(rec2.created) - new Date(rec1.created));
+  allNotes.forEach((note) => {
+    $('#note-grid').append(constructHTMLgrid(note));
+  });
+}
+
+function sortNotes(sortType) {
+  // delete
+  document.getElementById('note-grid').innerHTML = '';
+  debugger;
+  let notes;
+  if (sortType === 'desc') {
+    notes = allNotes.sort((rec1, rec2) => new Date(rec2.created) - new Date(rec1.created));
+  } else if (sortType === 'asc') {
+    notes = allNotes.sort((rec1, rec2) => new Date(rec1.created) - new Date(rec2.created));
+  }
+  notes.forEach((note) => {
     $('#note-grid').append(constructHTMLgrid(note));
   });
 }
