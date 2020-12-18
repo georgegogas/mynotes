@@ -1,3 +1,5 @@
+var selectedNoteId;
+
 // append html to note-grid div at index.php file
 function populateHTML(data) {
   const noteResult = data.records;

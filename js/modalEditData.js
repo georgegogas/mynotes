@@ -1,7 +1,6 @@
 $(document).on('click', '#edit-save-btn', function (e) {
-  var data = { title: '', category_id: '', body: '' };
+  const data = { title: '', category_id: '', body: '' };
   e.preventDefault();
-
   data.title = $('#editTitle').val();
 
   // check the user input of category (e.g Business) and pass the value
@@ -14,11 +13,10 @@ $(document).on('click', '#edit-save-btn', function (e) {
   } else {
     data.category_id = '1';
   }
-  console.log(data.category_id);
 
   data.body = $('#editDesc').val();
-  data = JSON.stringify(data);
-  console.log(data);
+  data.id = selectedNoteId;
+  const dataToSend = JSON.stringify(data);
 
   // get json data from read.php api
   $.ajax({
@@ -26,8 +24,10 @@ $(document).on('click', '#edit-save-btn', function (e) {
     //dataType: "json",
     //contentType: "application/json",
     url: 'api/note/update.php',
-    data: data,
-    success: function (data) {},
+    data: dataToSend,
+    success: function (data) {
+      location.reload();
+    },
     error: function (xhr) {
       alert('Error home.. status = ' + xhr.status + 'message = ' + xhr.statusText);
     },
