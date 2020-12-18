@@ -27,7 +27,9 @@ function constructHTMLgrid(note) {
 
   const dateObj = new Date(date);
   const monthName = monthNames[dateObj.getMonth()]; // "July" (or current month)
-  const dateTime = `${dateObj.getDate()} ${monthName}, ${dateObj.getFullYear()} - ${dateObj.getHours()}:${dateObj.getMinutes()}`;
+  const dateTime = `${dateObj.getDate()} ${monthName}, ${dateObj.getFullYear()} - ${dateObj.getHours()}:${
+    dateObj.getMinutes() < 10 ? `0${dateObj.getMinutes()}` : dateObj.getMinutes()
+  }`;
 
   console.log(dateTime);
 
