@@ -148,8 +148,8 @@
 	<!-- script for append html elements to card grid div -->
 	<script type="text/javascript" src="js/populateIndex.js"></script>
 	<script type="text/javascript" src="js/modalAddData.js"></script>
-	<script type="text/javascript" src="js/modalEdditData.js"></script>
-	<script type="text/javascript" src="js/modalEdditShow.js"></script>
+	<script type="text/javascript" src="js/modalEditData.js"></script>
+	<script type="text/javascript" src="js/modalEditShow.js"></script>
 
 </body>
 </html>
