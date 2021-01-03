@@ -46,18 +46,6 @@
 
 		<!-- Notes card grid ~~~~~~~~~~~~~~~ -->
 		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="note-grid">
-		  <div class="col mb-4">
-		    <div class="card h-100" style="border-radius: 5%">
-		      <div class="card-body">
-		      	<div class="row align-items-end">
-		      		<p class="text-muted ml-2">12 December, 2020 - 12:00 AM</p>
-		      		<button class="btn btn-edit ml-auto mr-2 mb-2" data-toggle="modal" data-target="#editNoteModal"><i class="fa fa-edit"></i></button>
-		      	</div>
-		        <h5 class="card-title"><i class="fa fa-circle mr-1 mb-1" style="color: blue; font-size: 15px vertical-align: top"></i>Special title treatment</h5>
-		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		      </div>
-		    </div>
-		  </div>
 		</div>
 
 	</div>
