@@ -25,15 +25,15 @@
 		<form>
 			<div class="form-row ml-1 mt-5 mb-4">
 				<div class="custom-control custom-radio custom-control-inline">
-				  <input class="custom-control-input" type="radio" name="sortOption" id="sortBs" value="1">
+				  <input class="custom-control-input" type="radio" name="labelsorting" id="sortBs" onclick="selectCategory('1')">
 				  <label class="custom-control-label blue" for="sortBs">Business</label>
 				</div>
 				<div class="custom-control custom-radio custom-control-inline">
-				  <input class="custom-control-input" type="radio" name="sortOption" id="sortPs" value="2">
+				  <input class="custom-control-input" type="radio" name="labelsorting" id="sortPs" onclick="selectCategory('2')">
 				  <label class="custom-control-label purple" for="sortPs">Personal</label>
 				</div>
 				<div class="custom-control custom-radio custom-control-inline">
-				  <input class="custom-control-input" type="radio" name="sortOption" id="sortH" value="3">
+				  <input class="custom-control-input" type="radio" name="labelsorting" id="sortH" onclick="selectCategory('3')">
 				  <label class="custom-control-label orange" for="sortH">Health</label>
 				</div>
 			

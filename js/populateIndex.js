@@ -10,6 +10,12 @@ function populateHTML(data) {
   });
 }
 
+function populateNotes(notes) {
+  notes.forEach((note) => {
+    $('#note-grid').append(constructHTMLgrid(note));
+  });
+}
+
 function sortNotes(sortType) {
   // delete
   document.getElementById('note-grid').innerHTML = '';
@@ -19,9 +25,28 @@ function sortNotes(sortType) {
   } else if (sortType === 'asc') {
     notes = allNotes.sort((rec1, rec2) => new Date(rec1.created) - new Date(rec2.created));
   }
-  notes.forEach((note) => {
-    $('#note-grid').append(constructHTMLgrid(note));
-  });
+  populateNotes(notes);
+}
+
+function selectCategory(catId) {
+  let notes;
+  if (catId === '1') {
+    document.getElementById('note-grid').innerHTML = '';
+    notes = allNotes.filter(function (note) {
+      if (note.category_id === catId) {
+        return note;
+      }
+    });
+  } else if (catId === '2') {
+    document.getElementById('note-grid').innerHTML = '';
+    notes = allNotes.filter((note) => note.category_id === catId);
+  } else if (catId === '3') {
+    document.getElementById('note-grid').innerHTML = '';
+    notes = allNotes.filter((note) => note.category_id === catId);
+  } else {
+    return;
+  }
+  populateNotes(notes);
 }
 
 // create string with html to pass it to append function
@@ -46,8 +71,6 @@ function constructHTMLgrid(note) {
   const dateTime = `${dateObj.getDate()} ${monthName}, ${dateObj.getFullYear()} - ${dateObj.getHours()}:${
     dateObj.getMinutes() < 10 ? `0${dateObj.getMinutes()}` : dateObj.getMinutes()
   }`;
-
-  console.log(dateTime);
 
   //create string with html for append function
   let html = '<div class="col mb-4">';
